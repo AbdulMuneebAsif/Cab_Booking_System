@@ -12,11 +12,11 @@ public class HomeWindows implements ActionListener
 
     HomeWindows()
     {
-        AdminButton.setBounds(100,160,200,40);
+        AdminButton.setBounds(100,110,200,40);
         AdminButton.setFocusable(false);
         AdminButton.addActionListener(this);
 
-        UserButton.setBounds(100,200,200,40);
+        UserButton.setBounds(100,160,200,40);
         UserButton.setFocusable(false);
         UserButton.addActionListener(this);
 
@@ -33,7 +33,7 @@ public class HomeWindows implements ActionListener
     @Override
     public void actionPerformed(ActionEvent actionEvent)
     {
-        if (actionEvent.getSource() == AdminButton  )
+        if (actionEvent.getSource() == AdminButton)
         {
             frame.dispose();
             AdminLogin adminLogin = new AdminLogin();
