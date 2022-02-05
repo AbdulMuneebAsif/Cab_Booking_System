@@ -5,10 +5,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class UserLogin implements ActionListener
+public class DriverLogin implements ActionListener
 {
-    JFrame userFrame = new JFrame("User Login");
-    JLabel userLabel1 = new JLabel("User");
+
+    JFrame userFrame = new JFrame("Driver Login");
+    JLabel userLabel1 = new JLabel("Driver");
     JLabel userLabel2 = new JLabel("Password");
     JTextField userTextField = new JTextField(25);
     JPasswordField userPasswordField = new JPasswordField();
@@ -16,7 +17,7 @@ public class UserLogin implements ActionListener
     JLabel successfulLogin = new JLabel(" ");
 
 
-    UserLogin()
+    DriverLogin()
     {
 
         userLabel1.setBounds(15, 25, 85, 30);
@@ -42,19 +43,17 @@ public class UserLogin implements ActionListener
         userFrame.add(successfulLogin);
 
         userFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        userFrame.setSize(420,420);
+        userFrame.setSize(600,450);
         userFrame.setLayout(null);
         userFrame.setVisible(true);
     }
-
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-
-
-        if (userTextField.getText().equals("Muneeb") && userPasswordField.getText().equals("Dpdl_29217")) {
+        if (userTextField.getText().equals("Driver") && userPasswordField.getText().equals("driver")) {
             successfulLogin.setText(" Login Successful! ");
         } else {
             successfulLogin.setText("Invalid Login!");
         }
+
     }
 }

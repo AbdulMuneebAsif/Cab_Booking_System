@@ -9,6 +9,7 @@ public class HomeWindows implements ActionListener
     JFrame frame = new JFrame("Home Screen");
     JButton AdminButton = new JButton("Admin");
     JButton UserButton = new JButton("User");
+    JButton DriverButton = new JButton("Driver ");
 
     HomeWindows()
     {
@@ -20,11 +21,16 @@ public class HomeWindows implements ActionListener
         UserButton.setFocusable(false);
         UserButton.addActionListener(this);
 
+        DriverButton.setBounds(100,210,200,40);
+        DriverButton.setFocusable(false);
+        DriverButton.addActionListener(this);
+
         frame.add(AdminButton);
         frame.add(UserButton);
+        frame.add(DriverButton);
 
 
-        frame.setSize(420,420);
+        frame.setSize(600,450);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setLayout(null);
         frame.setVisible(true);
@@ -43,6 +49,11 @@ public class HomeWindows implements ActionListener
         {
             frame.dispose();
             UserLogin userLogin = new UserLogin();
+        }
+        else if (actionEvent.getSource() == DriverButton)
+        {
+            frame.dispose();
+            DriverLogin driverLogin = new DriverLogin();
         }
 }
 }

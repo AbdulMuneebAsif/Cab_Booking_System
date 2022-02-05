@@ -5,52 +5,51 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AdminLogin
-{
-    JFrame adminFrame = new JFrame("Admin Login");
-    JLabel adminLabel1 = new JLabel("Admin");
-    JLabel adminLabel2 = new JLabel("Password");
-    JTextField adminTextField = new JTextField(25);
-    JPasswordField adminPasswordField = new JPasswordField();
+public class AdminLogin implements ActionListener {
+    JFrame userFrame = new JFrame("User Login");
+    JLabel userLabel1 = new JLabel("User");
+    JLabel userLabel2 = new JLabel("Password");
+    JTextField userTextField = new JTextField(25);
+    JPasswordField userPasswordField = new JPasswordField();
     JButton adminLoginButton = new JButton("Login");
-    JLabel successfulLogin = new JLabel("login please");
+    JLabel successfulLogin = new JLabel(" ");
 
 
-    AdminLogin()
-    {
+    AdminLogin() {
 
-        adminLabel1.setBounds(15, 25, 85, 30);
-        adminLabel1.setFont(new Font(null,Font.BOLD,16));
+        userLabel1.setBounds(15, 25, 85, 30);
+        userLabel1.setFont(new Font(null, Font.BOLD, 16));
 
-        adminLabel2.setBounds(15, 55, 85, 30);
-        adminLabel1.setFont(new Font(null,Font.PLAIN,16));
+        userLabel2.setBounds(15, 55, 85, 30);
+        userLabel1.setFont(new Font(null, Font.PLAIN, 16));
 
-        adminTextField.setBounds(105, 25, 170, 30);
+        userTextField.setBounds(105, 25, 170, 30);
 
-        adminPasswordField.setBounds(105, 55, 170, 30);
+        userPasswordField.setBounds(105, 55, 170, 30);
 
         adminLoginButton.setBounds(105, 120, 85, 30);
         adminLoginButton.setFocusable(false);
 
         successfulLogin.setBounds(105, 160, 305, 30);
 
-        adminFrame.add(adminLabel1);
-        adminFrame.add(adminLabel2);
-        adminFrame.add(adminTextField);
-        adminFrame.add(adminPasswordField);
-        adminFrame.add(adminLoginButton);
-        adminFrame.add(successfulLogin);
+        userFrame.add(userLabel1);
+        userFrame.add(userLabel2);
+        userFrame.add(userTextField);
+        userFrame.add(userPasswordField);
+        userFrame.add(adminLoginButton);
+        userFrame.add(successfulLogin);
 
-        adminFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        adminFrame.setSize(420,420);
-        adminFrame.setLayout(null);
-        adminFrame.setVisible(true);
+        userFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        userFrame.setSize(420, 420);
+        userFrame.setLayout(null);
+        userFrame.setVisible(true);
     }
 
-    public void adminLoginButton(java.awt.event.ActionEvent event) {
+    @Override
+    public void actionPerformed(ActionEvent actionEvent) {
 
 
-        if (adminTextField.getText().equals("Muneeb") && adminPasswordField.getText().equals("Dpdl_29217")) {
+        if (userTextField.getText().equals("Muneeb") && userPasswordField.getText().equals("Dpdl_29217")) {
             successfulLogin.setText(" Login Successful! ");
         } else {
             successfulLogin.setText("Invalid Login!");

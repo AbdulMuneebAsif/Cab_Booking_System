@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class AdminPanel implements ActionListener {
     JFrame frame = new JFrame("Admin Panel");
     JButton cab = new JButton("CAB");
-    JButton user = new JButton("USER");
+    JButton user = new JButton("Passenger");
 
     AdminPanel()
     {

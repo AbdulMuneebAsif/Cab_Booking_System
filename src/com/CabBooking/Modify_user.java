@@ -29,9 +29,9 @@ public class Modify_user implements ActionListener
     public void call()
     {
         tableModel = new DefaultTableModel();
-        tableModel.addColumn("ID");
+        tableModel.addColumn("Number");
         tableModel.addColumn("Name");
-        tableModel.addColumn("Program");
+        tableModel.addColumn("Address");
 
         table = new JTable(tableModel);
 
@@ -50,16 +50,16 @@ public class Modify_user implements ActionListener
         textField3.setLocation(200,195);
         textField3.setSize(150,25);
 
-        label = new JLabel("EmployeeData");
+        label = new JLabel("Passenger Data");
         label.setBounds(170,0,115,35);
 
-        label1 = new JLabel("ID Number");
+        label1 = new JLabel("Number");
         label1.setBounds(100,110,150,40);
 
         label2 = new JLabel("Name");
         label2.setBounds(100,150,150,40);
 
-        label3 = new JLabel("Program");
+        label3 = new JLabel("Address");
         label3.setBounds(100,190,150,40);
 
         panel =new JPanel();
@@ -90,7 +90,7 @@ public class Modify_user implements ActionListener
         panel.add(button1);
         panel.add(button2);
 
-        frame = new JFrame("LAB GUI");
+        frame = new JFrame("Passenger Data Modification");
         frame.setBounds(800,250,panel.getWidth(),panel.getHeight());
         frame.setLayout(null);
         frame.add(panel);
@@ -118,7 +118,7 @@ public class Modify_user implements ActionListener
             }
             else
             {
-                JOptionPane.showMessageDialog(null, "please fill all blocks");
+                JOptionPane.showMessageDialog(null, "please fill all details");
             }
         }
         else if (actionEvent.getSource() == button2)
