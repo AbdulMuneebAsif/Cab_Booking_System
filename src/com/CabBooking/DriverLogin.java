@@ -32,6 +32,7 @@ public class DriverLogin implements ActionListener
 
         adminLoginButton.setBounds(105, 120, 85, 30);
         adminLoginButton.setFocusable(false);
+        adminLoginButton.addActionListener(this);
 
         successfulLogin.setBounds(105, 160, 305, 30);
 
@@ -48,10 +49,18 @@ public class DriverLogin implements ActionListener
         userFrame.setVisible(true);
     }
     @Override
-    public void actionPerformed(ActionEvent actionEvent) {
-        if (userTextField.getText().equals("Driver") && userPasswordField.getText().equals("driver")) {
-            successfulLogin.setText(" Login Successful! ");
-        } else {
+    public void actionPerformed(ActionEvent actionEvent)
+    {
+        if (userTextField.getText().equals("Hamza") && userPasswordField.getText().equals("driver"))
+        {
+            if (actionEvent.getSource() == adminLoginButton)
+            {
+                userFrame.dispose();
+                Driver_Panel driver_panel = new Driver_Panel();
+            }
+        }
+        else
+        {
             successfulLogin.setText("Invalid Login!");
         }
 
