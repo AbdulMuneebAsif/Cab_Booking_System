@@ -31,6 +31,7 @@ public class UserLogin implements ActionListener
 
         adminLoginButton.setBounds(105, 120, 85, 30);
         adminLoginButton.setFocusable(false);
+        adminLoginButton.addActionListener(this);
 
         successfulLogin.setBounds(105, 160, 305, 30);
 
@@ -50,10 +51,16 @@ public class UserLogin implements ActionListener
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
 
-
-        if (userTextField.getText().equals("Muneeb") && userPasswordField.getText().equals("Dpdl_29217")) {
-            successfulLogin.setText(" Login Successful! ");
-        } else {
+        if (userTextField.getText().equals("Osama") && userPasswordField.getText().equals("user"))
+        {
+            if (actionEvent.getSource() == adminLoginButton)
+            {
+                userFrame.dispose();
+                UserPanel userPanel = new UserPanel();
+            }
+        }
+        else
+        {
             successfulLogin.setText("Invalid Login!");
         }
     }

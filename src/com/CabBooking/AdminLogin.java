@@ -6,13 +6,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AdminLogin implements ActionListener {
-    JFrame userFrame = new JFrame("User Login");
-    JLabel userLabel1 = new JLabel("User");
+    JFrame adminFrame = new JFrame("Admin Login");
+
+    JLabel userLabel1 = new JLabel("Admin");
     JLabel userLabel2 = new JLabel("Password");
+    JLabel successfulLogin = new JLabel(" ");
+
     JTextField userTextField = new JTextField(25);
     JPasswordField userPasswordField = new JPasswordField();
     JButton adminLoginButton = new JButton("Login");
-    JLabel successfulLogin = new JLabel(" ");
 
 
     AdminLogin() {
@@ -29,29 +31,36 @@ public class AdminLogin implements ActionListener {
 
         adminLoginButton.setBounds(105, 120, 85, 30);
         adminLoginButton.setFocusable(false);
+        adminLoginButton.addActionListener(this);
 
         successfulLogin.setBounds(105, 160, 305, 30);
 
-        userFrame.add(userLabel1);
-        userFrame.add(userLabel2);
-        userFrame.add(userTextField);
-        userFrame.add(userPasswordField);
-        userFrame.add(adminLoginButton);
-        userFrame.add(successfulLogin);
+        adminFrame.add(userLabel1);
+        adminFrame.add(userLabel2);
+        adminFrame.add(userTextField);
+        adminFrame.add(userPasswordField);
+        adminFrame.add(adminLoginButton);
+        adminFrame.add(successfulLogin);
 
-        userFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        userFrame.setSize(420, 420);
-        userFrame.setLayout(null);
-        userFrame.setVisible(true);
+        adminFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        adminFrame.setSize(420, 420);
+        adminFrame.setLayout(null);
+        adminFrame.setVisible(true);
     }
 
     @Override
-    public void actionPerformed(ActionEvent actionEvent) {
-
-
-        if (userTextField.getText().equals("Muneeb") && userPasswordField.getText().equals("Dpdl_29217")) {
-            successfulLogin.setText(" Login Successful! ");
-        } else {
+    public void actionPerformed(ActionEvent actionEvent)
+    {
+        if (userTextField.getText().equals("Muneeb") && userPasswordField.getText().equals("admin"))
+        {
+            if (actionEvent.getSource() == adminLoginButton)
+            {
+                adminFrame.dispose();
+                AdminPanel adminPanel = new AdminPanel();
+            }
+        }
+        else
+        {
             successfulLogin.setText("Invalid Login!");
         }
     }
