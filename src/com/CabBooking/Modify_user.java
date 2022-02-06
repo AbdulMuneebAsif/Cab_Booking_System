@@ -24,6 +24,7 @@ public class Modify_user implements ActionListener
     JPanel panel;
     JButton button1;
     JButton button2;
+    JButton button3;
     JFrame frame;
 
     public void call()
@@ -70,14 +71,23 @@ public class Modify_user implements ActionListener
         button1 = new JButton("ADD");
         button1.setBounds(105,300,70,30);
         button1.setBackground(Color.green);
+        button1.setForeground(Color.WHITE);
         button1.setFocusable(false);
         button1.addActionListener(this);
 
         button2 = new JButton("DELETE");
         button2.setBounds(220,300,100,30);
         button2.setBackground(Color.red);
+        button2.setForeground(Color.WHITE);
         button2.setFocusable(false);
         button2.addActionListener(this);
+
+        button3 = new JButton("< BACK");
+        button3.setBounds(0,0,100,20);
+        button3.setBackground(Color.DARK_GRAY);
+        button3.setForeground(Color.WHITE);
+        button3.setFocusable(false);
+        button3.addActionListener(this);
 
         panel.add(scrollPane);
         panel.add(label);
@@ -89,6 +99,7 @@ public class Modify_user implements ActionListener
         panel.add(textField3);
         panel.add(button1);
         panel.add(button2);
+        panel.add(button3);
 
         frame = new JFrame("Passenger Data Modification");
         frame.setBounds(800,250,panel.getWidth(),panel.getHeight());
@@ -131,6 +142,12 @@ public class Modify_user implements ActionListener
             {
                 return;
             }
+        }
+        else if (actionEvent.getSource() == button3)
+        {
+
+            frame.dispose();
+            AdminPanel return_to_adminPanel_from_user_modification_class = new AdminPanel();
         }
     }
 }
