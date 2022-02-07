@@ -1,15 +1,13 @@
 package com.CabBooking;
 
 import javax.swing.JScrollPane;
-import javax.swing.event.MouseInputListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.JFrame;
-import javax.swing.table.TableModel;
 import java.awt.event.*;
 
-public class Modify_cab implements ActionListener
+public class Modify_Cab_Data implements ActionListener
 {
     DefaultTableModel tableModel;
     JTable table;
@@ -146,7 +144,7 @@ public class Modify_cab implements ActionListener
         {
 
             frame.dispose();
-            AdminPanel return_to_adminPanel_from_cab_modification_class = new AdminPanel();
+            Admin_Panel return_to_adminPanel_from_cab_modification_class = new Admin_Panel();
         }
     }
 }

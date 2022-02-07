@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AdminLogin implements ActionListener {
+public class Admin_Login implements ActionListener {
     JFrame adminFrame = new JFrame("Admin Login");
 
     JLabel userLabel1 = new JLabel("Admin");
@@ -18,7 +18,7 @@ public class AdminLogin implements ActionListener {
     JButton BackButton = new JButton("< BACK");
 
 
-    AdminLogin() {
+    Admin_Login() {
 
         userLabel1.setBounds(15, 55, 85, 30);
         userLabel1.setFont(new Font(null, Font.BOLD, 16));
@@ -62,13 +62,13 @@ public class AdminLogin implements ActionListener {
             if (actionEvent.getSource() == adminLoginButton)
             {
                 adminFrame.dispose();
-                AdminPanel adminPanel = new AdminPanel();
+                Admin_Panel adminPanel = new Admin_Panel();
             }
         }
         else if (actionEvent.getSource() == BackButton)
         {
             adminFrame.dispose();
-            HomeWindows Admin_Login_To_Home_Windows_Button = new HomeWindows();
+            Home_Windows Admin_Login_To_Home_Windows_Button = new Home_Windows();
         }
         else
         {

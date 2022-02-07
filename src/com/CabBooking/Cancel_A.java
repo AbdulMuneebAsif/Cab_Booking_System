@@ -52,7 +52,7 @@ public class Cancel_A implements ActionListener
         else if (actionEvent.getSource() == yes)
         {
             cancel_frame.dispose();
-            UserPanel return_to_user_panel_from_A = new UserPanel();
+            Passenger_Panel return_to_user_panel_from_A = new Passenger_Panel();
         }
     }
 }

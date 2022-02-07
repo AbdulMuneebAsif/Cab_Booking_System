@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class UserPanel implements ActionListener
+public class Passenger_Panel implements ActionListener
 {
 
     JFrame cab_owner_panel_frame;
@@ -18,7 +18,7 @@ public class UserPanel implements ActionListener
     JLabel estimated_rate = new JLabel("Estimated Rate");
     JTextField rate = new JTextField(" ");
 
-    UserPanel() {
+    Passenger_Panel() {
 
         cab_owner_panel_frame = new JFrame("Passenger Panel");
         cab_owner_panel_frame.setSize(500, 500);
@@ -169,7 +169,7 @@ public class UserPanel implements ActionListener
             if (actionEvent.getSource() == back)
             {
                 cab_owner_panel_frame.dispose();
-                UserLogin Return_to_user_login_page = new UserLogin();
+                Passenger_Login Return_to_user_login_page = new Passenger_Login();
             }
     }
 }

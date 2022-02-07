@@ -1,17 +1,16 @@
 package com.CabBooking;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AdminPanel implements ActionListener {
+public class Admin_Panel implements ActionListener {
     JFrame frame = new JFrame("Admin Panel");
     JButton cab = new JButton("Modify Cab");
     JButton user = new JButton("Modify Passenger");
     JButton logout = new JButton("Logout");
 
-    AdminPanel()
+    Admin_Panel()
     {
 
         cab.setBounds(100,110,200,40);
@@ -41,20 +40,20 @@ public class AdminPanel implements ActionListener {
         if (actionEvent.getSource() == cab)
         {
             frame.dispose();
-            Modify_cab modify_cab = new Modify_cab();
+            Modify_Cab_Data modify_cab = new Modify_Cab_Data();
             modify_cab.call();
 
         }
         else if (actionEvent.getSource() == user)
         {
             frame.dispose();
-            Modify_user modify_user = new Modify_user();
+            Modify_Passenger_Data modify_user = new Modify_Passenger_Data();
             modify_user.call();
         }
         else if (actionEvent.getSource() == logout)
         {
             frame.dispose();
-            HomeWindows return_to_Home_Windows_From_admin_panel = new HomeWindows();
+            Home_Windows return_to_Home_Windows_From_admin_panel = new Home_Windows();
         }
 
     }

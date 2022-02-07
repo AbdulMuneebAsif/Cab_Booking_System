@@ -5,14 +5,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class Cancel_B implements ActionListener
+class Cancel_Ride_A implements ActionListener
 {
     JFrame cancel_frame = new JFrame();
     JButton yes = new JButton("YES");
     JButton no = new JButton("NO");
     JLabel sure = new JLabel("Are you sure you wanna cancel ride?");
 
-    Cancel_B()
+    Cancel_Ride_A()
     {
         cancel_frame.setSize(350,200);
         cancel_frame.setLayout(null);
@@ -47,12 +47,12 @@ class Cancel_B implements ActionListener
         if (actionEvent.getSource() == no)
         {
             cancel_frame.dispose();
-            Picked_Ride_B picked_ride_b = new Picked_Ride_B();
+            Picked_Ride_A pickedRideA = new Picked_Ride_A();
         }
         else if (actionEvent.getSource() == yes)
         {
             cancel_frame.dispose();
-            Cab_Owner_Panel_C cabOwnerPanelC = new Cab_Owner_Panel_C();
+            Cab_Owner_Panel_B cabOwnerPanelB = new Cab_Owner_Panel_B();
         }
     }
 }

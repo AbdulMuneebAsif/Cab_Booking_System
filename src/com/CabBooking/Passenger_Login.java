@@ -5,11 +5,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class DriverLogin implements ActionListener
+public class Passenger_Login implements ActionListener
 {
-
-    JFrame userFrame = new JFrame("Driver Login");
-    JLabel userLabel1 = new JLabel("Driver");
+    JFrame userFrame = new JFrame("User Login");
+    JLabel userLabel1 = new JLabel("User");
     JLabel userLabel2 = new JLabel("Password");
     JTextField userTextField = new JTextField(25);
     JPasswordField userPasswordField = new JPasswordField();
@@ -18,7 +17,7 @@ public class DriverLogin implements ActionListener
     JLabel successfulLogin = new JLabel(" ");
 
 
-    DriverLogin()
+    Passenger_Login()
     {
 
         userLabel1.setBounds(15, 55, 85, 30);
@@ -54,26 +53,27 @@ public class DriverLogin implements ActionListener
         userFrame.setLayout(null);
         userFrame.setVisible(true);
     }
+
     @Override
-    public void actionPerformed(ActionEvent actionEvent)
-    {
-        if (userTextField.getText().equals("Hamza") && userPasswordField.getText().equals("driver"))
+    public void actionPerformed(ActionEvent actionEvent) {
+
+        if (userTextField.getText().equals("Osama") && userPasswordField.getText().equals("user"))
         {
             if (actionEvent.getSource() == adminLoginButton)
             {
                 userFrame.dispose();
-                Driver_Panel driver_panel = new Driver_Panel();
+                Passenger_Panel userPanel = new Passenger_Panel();
             }
+
         }
         else if (actionEvent.getSource() == BackButton)
         {
             userFrame.dispose();
-            HomeWindows Driver_Login_To_Home_Windows_Button = new HomeWindows();
+            Home_Windows User_Login_To_Home_Windows_Button = new Home_Windows();
         }
         else
         {
             successfulLogin.setText("Invalid Login!");
         }
-
     }
 }

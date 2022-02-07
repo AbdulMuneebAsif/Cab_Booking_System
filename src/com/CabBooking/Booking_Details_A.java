@@ -9,6 +9,7 @@ public class Booking_Details_A implements ActionListener
 {
     JFrame booking_Details_Panel = new JFrame("Booking Details");
     JButton cancel = new JButton("Cancel");
+    JButton back = new JButton("< BACK");
 
     JLabel Driver_name = new JLabel("Captain");
     JLabel Driver_Time_To_reach = new JLabel("Estimated Time");
@@ -32,6 +33,10 @@ public class Booking_Details_A implements ActionListener
         cancel.addActionListener(this);
         cancel.setFocusable(false);
 
+        back.setBounds(0, 0, 100, 20);
+        back.addActionListener(this);
+        back.setFocusable(false);
+
         Driver_name.setBounds(110,90,130,30);
         Driver_name.setFont( new Font("Serif",Font.BOLD,14));
 
@@ -44,7 +49,7 @@ public class Booking_Details_A implements ActionListener
         Cab_Number.setBounds(110,210,130,30);
         Cab_Number.setFont( new Font("Serif",Font.BOLD,14));
 
-        Successful_booking.setBounds(85,10,380,30);
+        Successful_booking.setBounds(85,40,380,30);
         Successful_booking.setFont( new Font("Serif",Font.BOLD,16));
 
 
@@ -56,7 +61,7 @@ public class Booking_Details_A implements ActionListener
 
         contact.setBounds(250,130,130,30);
         contact.setFont( new Font("Serif",Font.PLAIN,14));
-        contact.setText("03432255936");
+        contact.setText("03438822347");
         contact.setEditable(false);
         contact.setBackground(Color.lightGray);
 
@@ -68,12 +73,13 @@ public class Booking_Details_A implements ActionListener
 
         number_plate.setBounds(250,210,130,30);
         number_plate.setFont( new Font("Serif",Font.PLAIN,14));
-        number_plate.setText("LHR-3572");
+        number_plate.setText("RWD-4628");
         number_plate.setEditable(false);
         number_plate.setBackground(Color.lightGray);
 
 
         booking_Details_Panel.add(cancel);
+        booking_Details_Panel.add(back);
         booking_Details_Panel.add(Driver_name);
         booking_Details_Panel.add(Driver_Contact);
         booking_Details_Panel.add(Driver_Time_To_reach);
@@ -96,7 +102,12 @@ public class Booking_Details_A implements ActionListener
         if (actionEvent.getSource() == cancel)
         {
             booking_Details_Panel.dispose();
-            Cancel_A sure_cancellation_msg_a = new Cancel_A();
+            Cancel_A sure_cancellation_msg_c = new Cancel_A();
+        }
+        else if (actionEvent.getSource() == back)
+        {
+            booking_Details_Panel.dispose();
+            Passenger_Panel passenger_panel_a = new Passenger_Panel();
         }
     }
 }
