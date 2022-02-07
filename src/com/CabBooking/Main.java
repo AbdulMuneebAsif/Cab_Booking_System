@@ -8,8 +8,8 @@ public class Main
 {
     public static void main(String[] args)
     {
-//        AdminPanel adminPanel = new AdminPanel();
+//        HomeWindows homeWindows = new HomeWindows();
 
-        HomeWindows homeWindows = new HomeWindows();
+        Booking_Details booking_details = new Booking_Details();
     }
 }

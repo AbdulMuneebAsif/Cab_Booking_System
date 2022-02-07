@@ -7,11 +7,12 @@ import java.awt.event.ActionListener;
 
 public class HomeWindows implements ActionListener {
     JFrame frame = new JFrame("Home Screen");
-    JButton AdminButton = new JButton("Admin");
-    JButton UserButton = new JButton("User");
-    JButton DriverButton = new JButton("Driver ");
+    JButton AdminButton = new JButton("Login as Admin");
+    JButton UserButton = new JButton("Login as User");
+    JButton DriverButton = new JButton("Login as Driver ");
 
     HomeWindows() {
+
         AdminButton.setBounds(100, 110, 200, 40);
         AdminButton.setFocusable(false);
         AdminButton.addActionListener(this);

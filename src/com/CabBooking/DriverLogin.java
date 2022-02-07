@@ -35,11 +35,11 @@ public class DriverLogin implements ActionListener
         adminLoginButton.setFocusable(false);
         adminLoginButton.addActionListener(this);
 
-        BackButton.setBounds(0, 0, 85, 30);
+        BackButton.setBounds(0,0,100,20);
         BackButton.setFocusable(false);
         BackButton.addActionListener(this);
 
-        successfulLogin.setBounds(105, 160, 305, 30);
+        successfulLogin.setBounds(105, 200, 305, 30);
 
         userFrame.add(userLabel1);
         userFrame.add(userLabel2);
