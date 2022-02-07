@@ -1,12 +1,9 @@
 package com.CabBooking;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import static java.awt.BorderLayout.BEFORE_FIRST_LINE;
 
 public class UserPanel implements ActionListener
 {
@@ -40,6 +37,7 @@ public class UserPanel implements ActionListener
 
         rate.setBounds(240,215,140,30);
         rate.setBackground(Color.ORANGE);
+        rate.setFont( new Font("Serif",Font.PLAIN,14));
 
         rate.setText("");
         rate.setEditable(false);
@@ -93,34 +91,34 @@ public class UserPanel implements ActionListener
             }
             else if (Pick_Up.getSelectedIndex() == 1 && Destination.getSelectedIndex() == 2)
             {
-                rate.setText("450 - 480 Rs");
+                rate.setText("   450 - 480 Rs   ");
 
                 if (actionEvent.getSource() == book)
                 {
                     cab_owner_panel_frame.dispose();
-                    Booking_Details booking_details = new Booking_Details();
+                    Booking_Details_A booking_details_1 = new Booking_Details_A();
                 }
 
             }
             else if (Pick_Up.getSelectedIndex() == 1 && Destination.getSelectedIndex() == 3)
             {
-                rate.setText("600 - 650 Rs");
+                rate.setText("   600 - 650 Rs   ");
 
                 if (actionEvent.getSource() == book)
                 {
                     cab_owner_panel_frame.dispose();
-                    Booking_Details booking_details = new Booking_Details();
+                    Booking_Details_B booking_details_2 = new Booking_Details_B();
                 }
             }
 
             else if (Pick_Up.getSelectedIndex() == 2 && Destination.getSelectedIndex() == 1)
             {
-                rate.setText("450 - 490 Rs");
+                rate.setText("   450 - 490 Rs   ");
 
                 if (actionEvent.getSource() == book)
                 {
                     cab_owner_panel_frame.dispose();
-                    Booking_Details booking_details = new Booking_Details();
+                    Booking_Details_C booking_details_3 = new Booking_Details_C();
                 }
             }
             else if (Pick_Up.getSelectedIndex() == 2 && Destination.getSelectedIndex() == 2)
@@ -132,33 +130,33 @@ public class UserPanel implements ActionListener
             }
             else if (Pick_Up.getSelectedIndex() == 2 && Destination.getSelectedIndex() == 3)
             {
-                rate.setText("400 - 470 Rs");
+                rate.setText("   400 - 470 Rs   ");
 
                 if (actionEvent.getSource() == book)
                 {
                     cab_owner_panel_frame.dispose();
-                    Booking_Details booking_details = new Booking_Details();
+                    Booking_Details_A booking_details_4 = new Booking_Details_A();
                 }
             }
 
             else if (Pick_Up.getSelectedIndex() == 3  && Destination.getSelectedIndex() == 1)
             {
-                rate.setText("600 - 660 Rs");
+                rate.setText("   600 - 660 Rs   ");
 
                 if (actionEvent.getSource() == book)
                 {
                     cab_owner_panel_frame.dispose();
-                    Booking_Details booking_details = new Booking_Details();
+                    Booking_Details_B booking_details_5 = new Booking_Details_B();
                 }
             }
             else if (Pick_Up.getSelectedIndex() == 3 &&  Destination.getSelectedIndex() == 2)
             {
-                rate.setText("400 - 470 Rs");
+                rate.setText("   400 - 470 Rs   ");
 
                 if (actionEvent.getSource() == book)
                 {
                     cab_owner_panel_frame.dispose();
-                    Booking_Details booking_details = new Booking_Details();
+                    Booking_Details_C booking_details_6 = new Booking_Details_C();
                 }
             }
             else if (Pick_Up.getSelectedIndex() == 3 && Destination.getSelectedIndex() == 3)

@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Booking_Details implements ActionListener
+public class Booking_Details_C implements ActionListener
 {
     JFrame booking_Details_Panel = new JFrame("Booking Details");
     JButton cancel = new JButton("Cancel");
@@ -14,6 +14,7 @@ public class Booking_Details implements ActionListener
     JLabel Driver_Time_To_reach = new JLabel("Estimated Time");
     JLabel Driver_Contact = new JLabel("Contact No.");
     JLabel Cab_Number = new JLabel("Cab Number");
+    JLabel Successful_booking = new JLabel("Your Rider will be on your way shortly");
 
     JTextField name = new JTextField();
     JTextField time = new JTextField();
@@ -21,9 +22,9 @@ public class Booking_Details implements ActionListener
     JTextField number_plate = new JTextField();
 
 
-    Booking_Details()
+    Booking_Details_C()
     {
-        booking_Details_Panel.setSize(500,500);
+        booking_Details_Panel.setSize(500,450);
         booking_Details_Panel.setLayout(null);
 
 
@@ -31,40 +32,45 @@ public class Booking_Details implements ActionListener
         cancel.addActionListener(this);
         cancel.setFocusable(false);
 
-        Driver_name.setBounds(110,50,130,30);
+        Driver_name.setBounds(110,90,130,30);
         Driver_name.setFont( new Font("Serif",Font.BOLD,14));
 
-        Driver_Contact.setBounds(110,90,130,30);
+        Driver_Contact.setBounds(110,130,130,30);
         Driver_Contact.setFont( new Font("Serif",Font.BOLD,14));
 
-        Driver_Time_To_reach.setBounds(110,130,130,30);
+        Driver_Time_To_reach.setBounds(110,170,130,30);
         Driver_Time_To_reach.setFont( new Font("Serif",Font.BOLD,14));
 
-        Cab_Number.setBounds(110,170,130,30);
+        Cab_Number.setBounds(110,210,130,30);
         Cab_Number.setFont( new Font("Serif",Font.BOLD,14));
 
+        Successful_booking.setBounds(85,10,380,30);
+        Successful_booking.setFont( new Font("Serif",Font.BOLD,16));
 
-        name.setBounds(250,50,130,30);
+
+        name.setBounds(250,90,130,30);
         name.setFont( new Font("Serif",Font.PLAIN,14));
-        name.setText("Hamza");
+        name.setText("Talha");
         name.setEditable(false);
+        name.setBackground(Color.lightGray);
 
-        contact.setBounds(250,90,130,30);
+        contact.setBounds(250,130,130,30);
         contact.setFont( new Font("Serif",Font.PLAIN,14));
-        contact.setText("03415613786");
+        contact.setText("03451375785");
         contact.setEditable(false);
+        contact.setBackground(Color.lightGray);
 
-        time.setBounds(250,130,130,30);
+        time.setBounds(250,170,130,30);
         time.setFont( new Font("Serif",Font.PLAIN,14));
-        time.setText("5 minutes");
+        time.setText("10 minutes");
         time.setEditable(false);
+        time.setBackground(Color.lightGray);
 
-        number_plate.setBounds(250,170,130,30);
+        number_plate.setBounds(250,210,130,30);
         number_plate.setFont( new Font("Serif",Font.PLAIN,14));
-        number_plate.setText("LHR-3854");
+        number_plate.setText("ISL-962");
         number_plate.setEditable(false);
-
-
+        number_plate.setBackground(Color.lightGray);
 
 
         booking_Details_Panel.add(cancel);
@@ -72,6 +78,7 @@ public class Booking_Details implements ActionListener
         booking_Details_Panel.add(Driver_Contact);
         booking_Details_Panel.add(Driver_Time_To_reach);
         booking_Details_Panel.add(Cab_Number);
+        booking_Details_Panel.add(Successful_booking);
 
         booking_Details_Panel.add(name);
         booking_Details_Panel.add(contact);
@@ -89,7 +96,7 @@ public class Booking_Details implements ActionListener
         if (actionEvent.getSource() == cancel)
         {
             booking_Details_Panel.dispose();
-            UserPanel Return_to_user_panel = new UserPanel();
+            Cancel_C sure_cancellation_msg_c = new Cancel_C();
         }
     }
 }
